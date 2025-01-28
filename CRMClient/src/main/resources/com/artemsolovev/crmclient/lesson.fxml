@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="548.0" prefWidth="896.0" stylesheets="@primer-light.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.artemsolovev.crmclient.LessonController">
+    <children>
+        <Label layoutX="198.0" layoutY="125.0" prefHeight="23.0" prefWidth="58.0" text="Предмет" />
+        <Label layoutX="611.0" layoutY="231.0" prefHeight="20.0" prefWidth="118.0" text="Время занятия " />
+        <TextField layoutX="125.0" layoutY="456.0" prefWidth="223.0" visible="false" />
+        <Label layoutX="211.0" layoutY="206.0" text="Тема" />
+        <TextArea fx:id="homeWorkTextField" editable="false" layoutX="116.0" layoutY="305.0" prefHeight="96.0" prefWidth="223.0" />
+        <Label layoutX="174.0" layoutY="280.0" text="Домашнее задание" />
+        <CheckBox fx:id="paymentCheckbox" layoutX="610.0" layoutY="401.0" mnemonicParsing="false" text="Оплачено" />
+      <TextField fx:id="teacherTextField" editable="false" layoutX="112.0" layoutY="53.0" prefHeight="36.0" prefWidth="682.0" />
+      <Label layoutX="409.0" layoutY="26.0" prefHeight="20.0" prefWidth="76.0" text="Репетитор" />
+      <TextField fx:id="subjectTextField" editable="false" layoutX="116.0" layoutY="153.0" prefHeight="23.0" prefWidth="223.0" />
+      <TextField fx:id="timeTextField" editable="false" layoutX="567.0" layoutY="256.0" prefHeight="36.0" prefWidth="181.0" />
+      <TextField fx:id="dateTextField" editable="false" layoutX="565.0" layoutY="153.0" />
+      <Label layoutX="642.0" layoutY="128.0" text="Дата" />
+      <TextField fx:id="themeTextField" editable="false" layoutX="116.0" layoutY="233.0" prefHeight="36.0" prefWidth="223.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="740.0" prefWidth="1120.0" stylesheets="@primer-light.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.artemsolovev.crmclient.StudentMainController">
+    <children>
+        <Pane layoutY="87.0" prefHeight="531.0" prefWidth="189.0">
+         <children>
+              <Button layoutX="43.0" layoutY="214.0" mnemonicParsing="false" onAction="#lessons" prefHeight="44.0" prefWidth="132.0" text="Занятия">
+                  <font>
+                      <Font name="Inter Regular" size="17.0" />
+                  </font>
+            </Button>
+              <Button layoutX="43.0" layoutY="283.0" mnemonicParsing="false" onAction="#teachers" prefHeight="44.0" prefWidth="132.0" text="Репетиторы">
+                  <font>
+                      <Font name="Inter Regular" size="17.0" />
+                  </font>
+            </Button>
+              <Button layoutX="43.0" layoutY="347.0" mnemonicParsing="false" onAction="#profile" prefHeight="44.0" prefWidth="132.0" text="Профиль">
+                  <font>
+                      <Font name="Inter Regular" size="17.0" />
+                  </font>
+              </Button>
+         </children></Pane>
+        <StackPane fx:id="area" layoutX="194.0" layoutY="91.0" prefHeight="587.0" prefWidth="922.0" />
+        <Pane prefHeight="88.0" prefWidth="1120.0" style="-fx-background-color: #218bff;;">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+            <children>
+                <Button layoutX="972.0" layoutY="26.0" mnemonicParsing="false" onAction="#logOutButton" prefHeight="37.0" prefWidth="111.0" styleClass="accent" text="Выйти">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="17.0" />
+                    </font></Button>
+                <Button layoutX="58.0" layoutY="14.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="226.0" styleClass="accent" text="MyLearn" textFill="#f8f8f8">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="39.0" />
+                    </font>
+                </Button>
+            </children></Pane>
+    </children>
+
+</AnchorPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="840.0" prefWidth="1115.0" stylesheets="@primer-light.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.artemsolovev.crmclient.TeacherMainController">
+    <children>
+      <Pane layoutY="87.0" prefHeight="753.0" prefWidth="171.0" />
+        <StackPane fx:id="area" layoutX="194.0" layoutY="91.0" prefHeight="587.0" prefWidth="925.0" />
+        <Button layoutX="30.0" layoutY="354.0" mnemonicParsing="false" onAction="#profile" prefHeight="44.0" prefWidth="132.0" text="Профиль">
+            <font>
+                <Font name="Inter Regular" size="17.0" />
+            </font></Button>
+        <Button layoutX="30.0" layoutY="290.0" mnemonicParsing="false" onAction="#clients" prefHeight="44.0" prefWidth="132.0" text="Клиенты">
+            <font>
+                <Font name="Inter Regular" size="17.0" />
+            </font></Button>
+        <Pane prefHeight="88.0" prefWidth="1120.0" style="-fx-background-color: #218bff;;">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+            <children>
+                <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="22.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fitHeight="37.0" fitWidth="36.0" layoutX="30.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+                <Button layoutX="972.0" layoutY="26.0" mnemonicParsing="false" onAction="#logOutButton" prefHeight="37.0" prefWidth="111.0" styleClass="accent" text="Выйти">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="17.0" />
+                    </font></Button>
+            <Button layoutX="58.0" layoutY="14.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="226.0" styleClass="accent" text="MyLearn" textFill="#f8f8f8">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="39.0" />
+               </font>
+            </Button>
+            </children></Pane>
+      <Button layoutX="30.0" layoutY="491.0" mnemonicParsing="false" onAction="#subjects" prefHeight="44.0" prefWidth="132.0" text="Дисциплины">
+         <font>
+            <Font name="Inter Regular" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="30.0" layoutY="420.0" mnemonicParsing="false" onAction="#schedule" prefHeight="44.0" prefWidth="132.0" text="Расписание">
+         <font>
+            <Font name="Inter Regular" size="17.0" />
+         </font>
+      </Button>
+        <Button layoutX="30.0" layoutY="224.0" mnemonicParsing="false" onAction="#lessons" prefHeight="44.0" prefWidth="132.0" text="Занятия">
+            <font>
+                <Font name="Inter Regular" size="17.0" />
+            </font>
+      </Button>
+    </children>
+</AnchorPane>

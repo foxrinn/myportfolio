@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="840.0" stylesheets="@primer-light.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.artemsolovev.crmclient.TeacherSubjectsController">
+   <children>
+      <Label layoutX="311.0" layoutY="115.0" prefHeight="31.0" prefWidth="343.0" text="Преподаваемые дисциплины">
+         <font>
+            <Font name="Calibri Light" size="27.0" />
+         </font>
+      </Label>
+      <ListView fx:id="subjectsListView" layoutX="321.0" layoutY="172.0" prefHeight="249.0" prefWidth="323.0" />
+      <Button layoutX="321.0" layoutY="457.0" mnemonicParsing="false" onAction="#addButton" prefHeight="37.0" prefWidth="107.0" styleClass="button-outlined" text="Добавить">
+         <font>
+            <Font name="Inter Regular" size="17.0" />
+         </font></Button>
+      <Button layoutX="538.0" layoutY="457.0" mnemonicParsing="false" onAction="#deleteButton" prefHeight="37.0" prefWidth="107.0" styleClass="button-outlined" text="Удалить">
+         <font>
+            <Font name="Inter Regular" size="17.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

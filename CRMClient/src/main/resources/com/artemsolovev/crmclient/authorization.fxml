@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1120.0" stylesheets="@primer-light.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.artemsolovev.crmclient.controller.AuthorizationController">
+   <children>
+      <TextField fx:id="loginTextField" layoutX="513.0" layoutY="257.0" prefHeight="36.0" prefWidth="195.0" />
+      <Label layoutX="435.0" layoutY="265.0" prefHeight="18.0" prefWidth="42.0" text="Логин" />
+      <Label layoutX="435.0" layoutY="313.0" prefHeight="18.0" prefWidth="62.0" text="Пароль" />
+      <Button layoutX="524.0" layoutY="363.0" mnemonicParsing="false" onAction="#signInButton" prefHeight="36.0" prefWidth="87.0" styleClass="accent" text="Войти" />
+      <Label layoutX="453.0" layoutY="444.0" onMouseClicked="#registrationLink" prefHeight="18.0" prefWidth="271.0" text="Нажмите, чтобы зарегистрироваться" />
+      <PasswordField fx:id="passTextField" layoutX="513.0" layoutY="305.0" prefHeight="36.0" prefWidth="195.0" />
+   </children>
+</AnchorPane>

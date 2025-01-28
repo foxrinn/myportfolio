@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@primer-light.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.artemsolovev.crmclient.AddTimeController">
+    <children>
+        <ComboBox fx:id="startTimeComboBox" layoutX="74.0" layoutY="252.0" prefWidth="150.0" />
+        <ComboBox fx:id="endTimeComboBox" layoutX="404.0" layoutY="257.0" prefWidth="150.0" />
+        <Button layoutX="244.0" layoutY="321.0" mnemonicParsing="false" onAction="#addTime" prefHeight="26.0" prefWidth="112.0" styleClass="accent" text="Добавить">
+         <font>
+            <Font name="Inter Regular" size="17.0" />
+         </font></Button>
+        <Label layoutX="285.0" layoutY="28.0" text="Дата" />
+        <Label layoutX="79.0" layoutY="225.0" text="Время начала работы" />
+        <Label layoutX="396.0" layoutY="226.0" text="Время окончания работы" />
+      <DatePicker fx:id="datepicker" layoutX="192.0" layoutY="59.0" onShowing="#click" />
+    </children>
+
+</AnchorPane>

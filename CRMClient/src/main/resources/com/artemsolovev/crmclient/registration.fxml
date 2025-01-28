@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="504.0" prefWidth="743.0" stylesheets="@primer-light.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.artemsolovev.crmclient.RegistrationController">
+    <children>
+        <RadioButton fx:id="trainerButton" layoutX="262.0" layoutY="75.0" mnemonicParsing="false" onAction="#trainerButton" prefHeight="36.0" prefWidth="84.0" text="Тренер" />
+        <RadioButton fx:id="apprenticeButton" layoutX="390.0" layoutY="81.0" mnemonicParsing="false" onAction="#apprenticeButton" prefHeight="27.0" prefWidth="72.0" text="Ученик" />
+        <TextField fx:id="loginTextField" layoutX="279.0" layoutY="125.0" />
+        <TextField fx:id="passwordTextField" layoutX="281.0" layoutY="174.0" />
+        <TextField fx:id="nameTextField" layoutX="283.0" layoutY="224.0" prefHeight="36.0" prefWidth="181.0" />
+        <Button layoutX="293.0" layoutY="383.0" mnemonicParsing="false" onAction="#registrationButton" styleClass="accent" text="Зарегистрироваться" />
+        <Label layoutX="300.0" layoutY="449.0" onMouseClicked="#signInLink" text="Нажмите, чтобы войти" />
+        <Label layoutX="221.0" layoutY="131.0" text="Логин" />
+        <Label layoutX="221.0" layoutY="180.0" text="Пароль" />
+        <Label layoutX="227.0" layoutY="230.0" prefHeight="20.0" prefWidth="35.0" text="ФИО" />
+      <Label layoutX="214.0" layoutY="276.0" prefHeight="17.0" prefWidth="61.0" text="Телефон" />
+      <TextField fx:id="phoneTextField" layoutX="281.0" layoutY="272.0" />
+      <Label fx:id="forStudent" layoutX="141.0" layoutY="331.0" prefHeight="20.0" prefWidth="134.0" />
+      <TextField fx:id="forStudentTextfield" layoutX="283.0" layoutY="323.0" prefHeight="36.0" prefWidth="181.0" />
+    </children>
+
+</AnchorPane>
