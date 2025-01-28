@@ -5,7 +5,7 @@
 
 **1) CRM + CRMClient** - сервис для репетиторов и их клиентов с реализованным desktop-приложением.
 
-   Стек технологий: **Java, Spring (Boot, Data, Web, Security), JavaFX, Lombok, MySQL, Bootsrap**.
+   Стек технологий: **Java, Spring (Boot, Data, Web, Security), JavaFX, Lombok, MySQL, Bootsrap, Retrofit**.
 
 **2) CardSpring** - веб-приложение для пользователей с учетом карточек по категориям.
 
