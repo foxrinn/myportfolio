@@ -1,0 +1,188 @@
+GET localhost:8080/user?login=dolphin&password=654
+
+###
+GET localhost:8080/user/1
+Authorization: Bearer_123
+
+
+### APPRENTICES correct post
+POST localhost:8080/apprentice
+content-type:application/json
+
+{
+  "login" : "dolphin",
+  "password" : "654",
+  "surname": "Solovev",
+  "name": "Mikhail",
+  "patronymic" : "Antonovich",
+  "phoneNumber" : "+79999999997"
+}
+
+### APPRENTICES correct post
+POST localhost:8080/apprentice
+content-type:application/json
+
+{
+  "login" : "wow12",
+  "password" : "12345",
+  "surname": "tt",
+  "name": "t",
+  "patronymic" : "t",
+  "phoneNumber" : "+77777777777"
+}
+
+### correct get all
+GET localhost:8080/apprentice
+Authorization: Bearer_{{simple}}
+
+### correct get id
+GET localhost:8080/apprentice/1
+Authorization: Bearer_{{admin}}
+
+### correct delete
+DELETE localhost:8080/apprentice/2
+Authorization: Bearer_{{admin}}
+
+### correct put
+PUT localhost:8080/apprentice
+content-type:application/json
+Authorization: Bearer_{{admin}}
+
+{
+  "id" : 1,
+  "login" : "dolphin",
+  "password" : "654",
+  "fio" : "Solovev Mikhail Artemovich",
+  "phoneNumber" : "+79999999900"
+}
+
+### USERS correct get id
+GET localhost:8080/user/2
+Authorization: Bearer_{{admin}}
+
+### ADMINS correct post
+POST localhost:8080/admin
+content-type:application/json
+Authorization: Basic artem 123
+
+{
+  "login" : "semen",
+  "password" : "1234",
+  "surname": "Solovev",
+  "name": "Semen",
+  "patronymic" : "Semenovich",
+  "email": "semen@mail.ru",
+  "salary": 50000
+}
+
+### correct get
+GET localhost:8080/admin/1
+Authorization: Bearer_{{simple}}
+
+### correct delete
+DELETE localhost:8080/admin/15
+Authorization: Bearer_{{admin}}
+
+
+### correct put
+PUT localhost:8080/admin
+content-type:application/json
+Authorization: Bearer_{{admin}}
+
+{
+  "id" : 3,
+  "login" : "semen",
+  "password" : "1234",
+  "surname": "Solovev",
+  "name": "Semen",
+  "patronymic" : "Semenovich",
+  "email": "semen@mail.ru",
+  "salary": 57000
+}
+
+### TRAINERS correct post
+POST localhost:8080/trainer
+content-type:application/json
+Authorization: Bearer_{{admin}}
+
+{
+  "login" : "fff",
+  "password" : "333",
+  "surname": "Smirnov",
+  "name": "Ivan",
+  "patronymic" : "Ivanovich",
+  "experience": 5,
+  "email": "ivan@mail.ru"
+}
+
+### correct get
+GET localhost:8080/trainer
+Authorization: Bearer_{{admin}}
+
+### correct get id
+GET localhost:8080/trainer/3
+Authorization: Bearer_{{simple}}
+
+### correct delete
+DELETE localhost:8080/trainer/6
+Authorization: Bearer_{{admin}}
+
+### correct put
+PUT localhost:8080/trainer
+content-type:application/json
+Authorization: Bearer_{{admin}}
+
+{
+  "id" : 3,
+  "login" : "semen1",
+  "password" : "234",
+  "surname": "Smirnov",
+  "name": "Ivan",
+  "patronymic" : "Ivanovich",
+  "experience": 5,
+  "email": "ivan@mail.ru"
+}
+
+### TRAINER SCHEDULES correct post
+POST localhost:8080/trainerschedule?idTrainer=3&day=sunday&start=12:00&end=16:00
+Authorization: Bearer_{{admin}}
+
+### correct get id
+GET localhost:8080/trainerschedule/3
+Authorization: Bearer_{{admin}}
+
+
+### TRAINER SCHEDULES correct delete
+DELETE localhost:8080/trainerschedule?idTrainer=3&day=sunday
+Authorization: Bearer_{{admin}}
+
+### TRAINING correct post
+POST localhost:8080/training?idTrainer=3&idApprentice=1
+content-type:application/json
+Authorization: Bearer_{{admin}}
+
+{
+  "numberGym": 28,
+  "date" : "20.10.2024",
+  "timeStart" : "14:00"
+}
+
+### correct get id
+GET localhost:8080/training/1
+Authorization: Bearer_{{admin}}
+
+### correct get id apprentice
+GET localhost:8080/training/apprentice/1
+Authorization: Bearer_{{admin}}
+
+### correct get id trainer
+GET localhost:8080/training?idTrainer=3
+Authorization: Bearer_{{admin}}
+
+###
+GET localhost:8080/training/date?idTrainer=3&localDate=20.10.2024&numberGym=28
+Authorization: Bearer_{{admin}}
+
+### correct delete
+DELETE localhost:8080/training/1
+Authorization: Bearer_{{admin}}
