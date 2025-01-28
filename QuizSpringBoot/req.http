@@ -1,0 +1,71 @@
+### ADMINS correct post
+POST localhost:8080/admin
+content-type:application/json
+
+{
+  "login" : "semen",
+  "password" : "1234",
+  "fio" : "Solovev Semen Semenovich"
+}
+
+### QUIZ USER correct post
+POST localhost:8080/quizuser
+content-type:application/json
+
+{
+  "login" : "fox",
+  "password" : "123",
+  "fio" : "Solovev Artem Semenovich"
+}
+
+###
+POST localhost:8080/quizuser
+content-type:application/json
+
+{
+"login" : "dolphin",
+"password" : "12",
+"fio" : "Solovev Mikhail Semenovich"
+}
+
+###
+GET localhost:8080/quizuser
+Authorization: Basic semen 1234
+
+### correct get log pass
+GET localhost:8080/user/search
+Authorization: Basic fox 123
+
+### QUIZ
+POST localhost:8080/quiz/5/21/easy/1
+Authorization: Basic fox 123
+
+###
+GET localhost:8080/quiz/1
+Authorization: Basic semen 1234
+
+### ANSWER
+POST localhost:8080/answer/1
+Authorization: Basic fox 123
+content-type:application/json
+
+{
+  "answer": "Horse-Riding"
+}
+
+###
+POST localhost:8080/answer/2
+Authorization: Basic fox 123
+content-type:application/json
+
+{
+  "answer": "1-5"
+}
+
+###
+GET localhost:8080/answer
+Authorization: Basic fox 123
+
+###
+GET localhost:8080/answer/71
+Authorization: Basic fox 123
