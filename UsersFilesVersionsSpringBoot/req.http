@@ -1,0 +1,33 @@
+POST http://localhost:8080/user
+content-type:application/json
+
+{
+  "login" : "dolphin",
+  "password" : "654",
+  "fio" : "Solovev Artem Antonovich"
+}
+
+###
+GET localhost:8080/user/search
+Authorization: Basic dolphin 654
+
+###
+GET localhost:8080/file/user/tv.json
+Authorization: Basic dolphin 654
+
+###
+GET localhost:8080/file/user/pom.xml
+Authorization: Basic dolphin 654
+
+###
+GET localhost:8080/file/pom.xml/1
+Authorization: Basic dolphin 654
+
+###
+GET localhost:8080/file/user/zip
+Authorization: Basic dolphin 654
+
+###
+GET localhost:8080/file/user/zip/tv.json
+Authorization: Basic dolphin 654
+
