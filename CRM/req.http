@@ -1,0 +1,133 @@
+### USERS correct get id
+GET localhost:8080/user/1
+Authorization: Basic dolphin 654
+
+### correct get log pass
+GET localhost:8080/user/search
+Authorization: Basic dolphin 654
+
+### correct post teacher
+POST localhost:8080/teacher
+content-type:application/json
+
+{
+  "login" : "dolphin",
+  "password" : "654",
+  "fio" : "Solovev Semen Semenovich",
+  "phone" : "+79999999999",
+  "experience" : 5
+}
+
+### correct get id
+GET localhost:8080/teacher/1
+Authorization: Basic dolphin 654
+
+### correct get all
+GET localhost:8080/teacher
+Authorization: Basic dolphin 654
+
+### correct put
+PUT localhost:8080/teacher
+content-type:application/json
+Authorization: Basic dolphin 654
+
+{
+  "id": 1,
+  "login" : "dolphin",
+  "password" : "654",
+  "fio" : "Solovev Semen Semenovich",
+  "phone" : "+79999999999",
+  "experience": 3
+}
+
+### correct post student
+POST localhost:8080/student/1
+content-type:application/json
+
+{
+  "login" : "student",
+  "password" : "123",
+  "fio" : "Ivanov Ivan Antonovich",
+  "phone" : "+79999999996"
+}
+
+### correct get student
+GET localhost:8080/student/2
+
+### correct get student
+GET localhost:8080/student
+Authorization: Basic dolphin 654
+
+### correct put student
+PUT localhost:8080/student
+content-type:application/json
+Authorization: Basic dolphin 654
+
+{
+  "id": 2,
+  "login" : "fox",
+  "password" : "123",
+  "fio" : "Solovev Mikhail Artemovich",
+  "phone" : "+79999999990"
+}
+
+### WORK DAY SCHEDULES correct post
+POST localhost:8080/workdayschedule/1
+content-type:application/json
+
+{
+  "date" : "11.06.2024",
+  "start" : "10:00",
+  "end" : "16:00"
+}
+
+### correct get id
+GET localhost:8080/workdayschedule/1
+
+### correct delete id
+DELETE localhost:8080/workdayschedule/13
+
+### SUBJECT correct post
+POST localhost:8080/subject/1
+content-type:application/json
+Authorization: Basic dolphin 654
+
+{
+  "name" : "Высшая математика"
+}
+
+###
+DELETE localhost:8080/subject/14
+
+### LESSON correct post
+POST localhost:8080/lesson?idTeacher=1&idStudent=2&idSubject=15
+content-type:application/json
+Authorization: Basic dolphin 654
+
+{
+  "payment": false,
+  "status" : true,
+  "theme" : "Java SE",
+  "homework": "Download IDE.",
+  "date" : "18.06.2024",
+  "timeStart" : "10:30"
+}
+
+### correct get id
+GET localhost:8080/lesson/1
+
+### correct get id
+GET localhost:8080/lesson/student/2
+
+### correct get id
+GET localhost:8080/lesson/?idTeacher=1
+
+###
+GET localhost:8080/lesson/date?idTeacher=1&localDate=18.06.2024
+Authorization: Basic dolphin 654
+
+### correct delete
+DELETE localhost:8080/lesson/14
+Authorization: Basic dolphin 654
+
+
