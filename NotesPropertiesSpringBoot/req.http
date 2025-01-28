@@ -1,0 +1,19 @@
+###
+GET localhost:8080/compliment
+
+###
+GET localhost:8080/compliment/3
+
+###
+GET localhost:8080/compliment/random
+Authorization: Basic dolphin 654
+
+###
+POST http://localhost:8080/user
+content-type:application/json
+
+{
+  "login" : "dolphin",
+  "password" : "654"
+}
+

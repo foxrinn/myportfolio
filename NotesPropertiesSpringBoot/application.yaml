@@ -1,0 +1,6 @@
+project-settings:
+  list:
+    - text: Hello
+    - text: World
+    - text: Peter
+    - text: Test
