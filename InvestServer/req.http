@@ -1,0 +1,74 @@
+### USERS correct post
+POST localhost:8080/user
+content-type:application/json
+
+{
+  "login" : "dolphin",
+  "password" : "654",
+  "fio" : "Semenov Semen Semenovich",
+  "bornDate" : "08.07.2002",
+  "address" : "Moscow, Lenina 54"
+}
+
+### correct get
+GET localhost:8080/user/1
+
+### correct get all
+GET localhost:8080/user
+
+### ADMINS correct post
+POST localhost:8080/admin
+content-type:application/json
+
+{
+  "login" : "bear",
+  "password" : "123",
+  "fio" : "Solovev Artem Antonovich"
+}
+
+### REQUESTS correct post
+POST localhost:8080/request/1
+content-type:application/json
+
+{
+  "name" : "Coca-Cola",
+  "investPrice" : 10000,
+  "expectedPrice" : 15000,
+  "years" : 1,
+  "comment" : "Long position"
+}
+
+###
+POST localhost:8080/request/1
+content-type:application/json
+
+{
+"name" : "Tesla",
+"investPrice" : 10000,
+"expectedPrice" : 20000,
+"years" : 3,
+"comment" : "Short position"
+}
+
+### correct get by idUser
+GET localhost:8080/request/1
+
+### correct get all unwatched
+GET localhost:8080/request
+
+### calculate an InvestProperty for a request with given id
+POST localhost:8080/investProperty?idRequest=1&annualIncome=1000&expectedFinalPrice=100000
+
+###
+GET localhost:8080/investProperty/1
+
+### Decide TRUE for the request id=1
+PUT localhost:8080/request?id=1&decision=true&comment=test with changes
+
+### Decide FALSE for the request id=2
+PUT localhost:8080/request?id=2&decision=false&comment=noe its false
+
+
+### GET BY LOGIN AND PASSWORD
+GET http://localhost:8080/user/search?login=dolphin&password=654
+
