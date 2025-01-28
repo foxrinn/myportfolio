@@ -1,0 +1,109 @@
+### USERS correct post
+POST localhost:8080/user
+content-type:application/json
+
+{
+  "login" : "dolphin",
+  "password" : "654",
+  "name" : "Semen"
+}
+
+### USERS correct post
+POST localhost:8080/user
+content-type:application/json
+
+{
+  "login" : "bear",
+  "password" : "123",
+  "name" : "Artem"
+}
+
+### incorrect post
+POST localhost:8080/user
+content-type:application/json
+
+{
+  "login": "tt",
+  "name": "ggg"
+}
+
+### correct get
+GET localhost:8080/user/1
+
+### correct get login password
+GET localhost:8080/user/search?login=dolphin&password=654
+
+### incorrect id get
+GET localhost:8080/user/5
+
+### correct delete
+DELETE localhost:8080/user/2
+
+### incorrect id delete
+DELETE localhost:8080/user/6
+
+### CATEGORIES correct post
+POST localhost:8080/category/1
+content-type:application/json
+
+{
+  "name" : "extra light"
+}
+
+### correct get
+GET localhost:8080/category/search/1
+
+### correct get idUser
+GET localhost:8080/category/1
+
+### incorrect id get
+GET localhost:8080/category/search/100
+
+### correct delete
+DELETE localhost:8080/category/2
+
+### incorrect id delete
+DELETE localhost:8080/category/10
+
+### correct put
+PUT localhost:8080/category
+content-type:application/json
+
+{
+  "id" : 1,
+  "name" : "extra hard"
+}
+
+### CARDS correct post
+POST localhost:8080/card/1
+content-type:application/json
+
+{
+  "question" : "When?",
+  "answer" : "Yes."
+}
+
+### correct get
+GET localhost:8080/card/1
+
+### correct idCategory get
+GET localhost:8080/card/idCategory/1
+
+### correct idUser get
+GET localhost:8080/card/idUser/1
+
+### incorrect id get
+GET localhost:8080/card/10
+
+### correct delete
+DELETE localhost:8080/card/1
+
+### correct put
+PUT localhost:8080/card
+content-type:application/json
+
+{
+  "id" : 1,
+  "question" : "Where?",
+  "answer" : "Everywhere."
+}
